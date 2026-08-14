@@ -8,10 +8,11 @@ import BookingFlow from '../components/BookingFlow'
 import OwnerDashboardMock from '../components/OwnerDashboardMock'
 import VIPTiers from '../components/VIPTiers'
 import FooterBadges from '../components/FooterBadges'
+import { brands } from '../config/brands'
 
 export default function Page(){
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="text-white min-h-screen" style={{backgroundColor: brands.black}}>
       <Nav />
       <SplitHero />
       <MobileStrip />

@@ -1,7 +1,9 @@
 import React from 'react'
 
+import { brands } from '../config/brands'
+
 const Card = ({title, price, popular}:{title:string, price:string, popular?:boolean})=> (
-  <div className={`p-6 rounded-lg ${popular? 'bg-amber-500 text-black':'bg-gray-900 text-white'}`}>
+  <div className={`p-6 rounded-lg ${popular? '':'bg-gray-900 text-white'}`} style={popular ? {backgroundColor: brands.lace, color: brands.black} : undefined}>
     <div className="font-bold text-lg">{title}</div>
     <div className="text-2xl font-extrabold my-3">{price}</div>
     <ul className="text-sm space-y-1 mb-4">
@@ -9,7 +11,7 @@ const Card = ({title, price, popular}:{title:string, price:string, popular?:bool
       <li>Priority Waitlist</li>
       <li>Exclusive Offers</li>
     </ul>
-    <button className={`w-full py-2 rounded ${popular? 'bg-black text-amber-400':'bg-amber-500 text-black'}`}>JOIN NOW</button>
+    <button className="w-full py-2 rounded" style={popular ? {backgroundColor: brands.black, color: brands.lace} : {backgroundColor: brands.lace, color: brands.black}}>JOIN NOW</button>
   </div>
 )
 
